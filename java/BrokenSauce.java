@@ -12,7 +12,7 @@ public class BrokenSauce {
 
   public static final String USERNAME = System.getenv("SAUCE_USERNAME");
   public static final String ACCESS_KEY = System.getenv("SAUCE_ACCESS_KEY");
-  public static final String URL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80/wd/hub";
+  public static final String URL = "https://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com/wd/hub";
 
   public static void main(String[] args) throws Exception {
 
@@ -29,13 +29,13 @@ public class BrokenSauce {
     DesiredCapabilities caps = DesiredCapabilities.chrome();
     caps.setCapability("platform", "Windows 7");
     caps.setCapability("browserName", "chrome");
-    caps.setCapability("version", "48");
+    caps.setCapability("version", "latest");
     caps.setCapability("name", "Broken Google Search");
 
     WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-    driver.get("www.google.com/");
+    driver.get("https://www.google.com/");
     WebElement search = driver.findElement(By.name("Search"));
 
     search.sendKeys("Sauce Labs");
