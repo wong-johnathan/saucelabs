@@ -15,7 +15,7 @@ const ONDEMAND_URL = `https://${SAUCE_USERNAME}:${SAUCE_ACCESS_KEY}@ondemand.sau
 *
 * Bonus: Once you get the test working, update the code so that when the test runs, it 
 * can reach the Sauce Labs homepage 
-* and then open the Docs page
+* hover over 'Resources' and then clicks the 'Documentation' link
 */
 
 describe('Broken Sauce', function () {
