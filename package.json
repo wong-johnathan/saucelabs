@@ -19,9 +19,9 @@
   },
   "homepage": "https://github.com/enriquegh/support-tech-test#readme",
   "devDependencies": {
-    "mocha": "^9.0.0",
-    "saucelabs": "^5.1.0",
-    "selenium-webdriver": "^4.0.0-alpha.7"
+    "mocha": "^9.1.3",
+    "saucelabs": "^7.1.2",
+    "selenium-webdriver": "^4.1.0"
   },
   "mocha": {
     "timeout": 60000
